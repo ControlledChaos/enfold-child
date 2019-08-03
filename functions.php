@@ -14,11 +14,6 @@
 /**
  * Renaming the theme
  *
- * First change the name of this file to reflect the new name of your theme.
- *
- * Next change the information above in the theme header and either change
- * the theme name in the License & Warranty notice or remove it.
- *
  * Following is a list of strings to find and replace in all theme files.
  *
  * 1. Theme subpackage name
