@@ -96,7 +96,7 @@ final class Functions {
 	}
 
 	/**
-	 * Theme setup.
+	 * Theme setup
 	 *
 	 * @since  1.0.0
 	 * @access public
