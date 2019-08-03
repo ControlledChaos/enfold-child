@@ -2,8 +2,9 @@
 /**
  * Enfold Child theme functions
  *
- * @package    WordPress
+ * @package    WordPress/Enfold
  * @subpackage Enfold_Child
+ *
  * @author     Greg Sweet <greg@ccdzine.com>
  * @link       https://github.com/ControlledChaos/enfold-child
  * @license    http://www.gnu.org/licenses/gpl-3.0.html
@@ -184,30 +185,13 @@ final class Functions {
 	 * @access private
 	 * @return void
 	 */
-	private function dependencies() {}
+	private function dependencies() {
+
+		// Advanced Custom Fields functionality.
+		require_once get_theme_file_path( '/includes/class-acf.php' );
+	}
 
 }
-
-/**
- * Get the instance of the Functions class
- *
- * This function is useful for quickly grabbing data
- * used throughout the theme.
- *
- * @since  1.0.0
- * @access public
- * @return object
- */
-function enfold_child() {
-
-	$enfold_child = Functions::get_instance();
-
-	return $enfold_child;
-
-}
-
-// Run the Functions class.
-enfold_child();
 
 /**
  * Check for Advanced Custom Fields
@@ -242,3 +226,24 @@ function enfoldchild_acf_pro() {
 	}
 
 }
+
+/**
+ * Get the instance of the Functions class
+ *
+ * This function is useful for quickly grabbing data
+ * used throughout the theme.
+ *
+ * @since  1.0.0
+ * @access public
+ * @return object
+ */
+function enfold_child() {
+
+	$enfold_child = Functions::get_instance();
+
+	return $enfold_child;
+
+}
+
+// Run the Functions class.
+enfold_child();
